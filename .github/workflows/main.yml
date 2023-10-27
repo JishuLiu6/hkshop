@@ -1,9 +1,7 @@
 name: Run API requests
 
 on:
-  push:
-    branches: [ master ]
-
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
