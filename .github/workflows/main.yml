@@ -2,7 +2,7 @@ name: Run API requests
 
 on:
   schedule:
-    - cron: '10 * * * *'  # 每半小时运行一次
+    - cron: '11 * * * *'  # 每半小时运行一次
 
 jobs:
   build:
