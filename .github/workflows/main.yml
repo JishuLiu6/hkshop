@@ -1,8 +1,8 @@
 name: Run API requests
 
 on:
-  schedule:
-    - cron: '44 * * * *'  # 每半小时运行一次
+  push:
+    branches: [ master ]
 
 jobs:
   build:
