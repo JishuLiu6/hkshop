@@ -2,7 +2,7 @@ name: Run API requests
 
 on:
   schedule:
-    - cron: '0,30 * * * *'  # 每半小时运行一次
+    - cron: '30 * * * *'  # 每半小时运行一次
 
 jobs:
   build:
@@ -16,9 +16,17 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        pip install requests
+        pip install pandas
         pip install openpyxl
+        pip install loguru
+        pip install retrying
+        pip install requests
+        pip install pytz
     - name: Run script
       env:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
-      run: python instagram_schedule.py
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        INSTAGRAM: ${{ secrets.INSTAGRAM }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        
+      run: python schedule.py
