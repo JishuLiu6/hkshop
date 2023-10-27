@@ -2,7 +2,7 @@ name: Run API requests
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/30 10-20 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
