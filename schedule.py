@@ -134,6 +134,7 @@ def schedule_post(app_id, app_secret, instagram, access_token):
         # 获取行中的时间
         task_time = row['規劃時間']
         # 如果任务的时间在过去的 5 分钟和未来的 5 分钟之间
+        task_time = hk_tz.localize(task_time)
         if past <= task_time <= future:
             # 执行任务
             business_post.post_instagram_page(row['內容'], row['圖片列表'].split(','))
