@@ -27,4 +27,4 @@ jobs:
         INSTAGRAM: ${{ secrets.INSTAGRAM }}
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         
-      run: python schedule.py
+      run: python schedule_online.py
