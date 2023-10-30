@@ -15,7 +15,6 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        pip install pandas
         pip install openpyxl
         pip install loguru
         pip install retrying
